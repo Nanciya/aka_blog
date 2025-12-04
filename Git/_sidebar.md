@@ -1,1 +1,1 @@
-* [Git笔记](./Git/Git.md)
+* [Git笔记](aka_blog/Git/Git.md)
