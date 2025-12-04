@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>山河远赴 🏃‍💨</title>
-    <link rel="icon" href="_image/hot-2.png"/>
-    <link rel="stylesheet" href="./_media/css/head.css">
+    <!-- 改为绝对路径，确保无论当前路由如何都能正确加载 -->
+    <link rel="icon" href="/aka_blog/_image/hot-2.png"/>
+    <link rel="stylesheet" href="/aka_blog/_media/css/head.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -26,8 +27,9 @@
         maxLevel: 6,//最大的内容表级别
         coverpage: true,
         onlyCover: true,
-        loadSidebar: true, //开启侧边栏
-        loadNavbar: true, //导航栏
+        // 把 loadSidebar 和 loadNavbar 指明为项目下的绝对路径，避免 history 路由造成的相对路径问题
+        loadSidebar: '/aka_blog/_sidebar.md', // 原来是 true，改为实际路径
+        loadNavbar: '/aka_blog/_navbar.md',   // 原来是 true，改为实际路径
         auto2top: true, //自动回到最顶部
         subMaxLevel: 6, //显示markdown中的目录（按照h1,h2,h3层级关系显示）
         copyCode: {     //代码复制按钮
@@ -62,12 +64,12 @@
             crossChapter: true,
             crossChapterText: true,
         },
-        routerMode: "hash",  // 访问去除#号
+        routerMode: "history",  // 访问去除#号
         // 避免不必要的回退
-        // alias: {
-        //   '/.*/_sidebar.md': '/_sidebar.md',
-        //   '/docsify_en/(.*)': '/docsify_en/'
-        // },
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md',
+            '/docsify_en/(.*)': '/docsify_en/'
+        },
         plugins: [
             function(hook) {
                 var footer = [
@@ -86,11 +88,11 @@
     }
 </script>
 <!--  搜索样式-->
-<script src="./_media/js/search.min.js"></script>
+<script src="/aka_blog/_media/js/search.min.js"></script>
 <!-- Docsify v4 -->
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 <!--右侧菜单-->
-<script src="./_media/js/external-sidebar.js"></script>
+<script src="/aka_blog/_media/js/external-sidebar.js"></script>
 <!-- emoji 表情插件-->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 <!--  评论插件-->
