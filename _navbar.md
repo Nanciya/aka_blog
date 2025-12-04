@@ -1,10 +1,8 @@
-* [首页](/)
+* [首页](./)
 
-* [文档规范](其他收集/markdown.md)
+* [文档规范](./其他收集/markdown.md)
 
 * [官方文档](https://docsify.js.org/#/zh-cn/)
-
-* [视频教程](其他收集/video.md)
 
 
 [//]: # (* [Go]&#40;Go/README.md&#41;)
