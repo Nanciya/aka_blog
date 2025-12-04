@@ -62,12 +62,12 @@
             crossChapter: true,
             crossChapterText: true,
         },
-        routerMode: "history",  // 访问去除#号
+        routerMode: "hash",  // 访问去除#号
         // 避免不必要的回退
-        alias: {
-          '/.*/_sidebar.md': '/_sidebar.md',
-          '/docsify_en/(.*)': '/docsify_en/'
-        },
+        // alias: {
+        //   '/.*/_sidebar.md': '/_sidebar.md',
+        //   '/docsify_en/(.*)': '/docsify_en/'
+        // },
         plugins: [
             function(hook) {
                 var footer = [
